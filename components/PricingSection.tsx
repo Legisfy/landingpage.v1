@@ -85,6 +85,27 @@ const plans = [
     },
     discount: "26%",
     popular: false
+  },
+  {
+    name: "Enterprise",
+    subtitle: "Sob Demanda",
+    monthlyPrice: "Personalizado",
+    annualPrice: "Personalizado",
+    description: "Para empresas que precisam de recursos específicos e integrações customizadas.",
+    features: [
+      "Recursos Específicos sob demanda",
+      "Desenvolvimento Customizado",
+      "Integrações de API ilimitadas",
+      "Gerente de Conta Próprio",
+      "Suporte via WhatsApp 24/7"
+    ],
+    buttonText: "Entre em Contato",
+    links: {
+      monthly: "https://wa.me/5511999999999", // Placeholder, ideally a generic contact or WhatsApp
+      yearly: "https://wa.me/5511999999999"
+    },
+    discount: "Custom",
+    popular: false
   }
 ];
 
@@ -127,7 +148,7 @@ const PricingSection: React.FC = () => {
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 items-stretch">
         {plans.map((plan, i) => (
           <motion.div
             key={i}
@@ -164,13 +185,17 @@ const PricingSection: React.FC = () => {
                   transition={{ duration: 0.2 }}
                   className="flex items-baseline gap-1"
                 >
-                  <span className="text-gray-400 font-medium text-sm">R$</span>
-                  <span className="text-4xl font-black text-white">
+                  {plan.monthlyPrice !== "Personalizado" && (
+                    <span className="text-gray-400 font-medium text-sm">R$</span>
+                  )}
+                  <span className={`${plan.monthlyPrice === "Personalizado" ? 'text-2xl' : 'text-4xl'} font-black text-white`}>
                     {billingCycle === 'monthly' ? plan.monthlyPrice : plan.annualPrice}
                   </span>
-                  <span className="text-gray-500 text-xs">
-                    {billingCycle === 'monthly' ? '/mês' : '/ano'}
-                  </span>
+                  {plan.monthlyPrice !== "Personalizado" && (
+                    <span className="text-gray-500 text-xs">
+                      {billingCycle === 'monthly' ? '/mês' : '/ano'}
+                    </span>
+                  )}
                 </motion.div>
               </AnimatePresence>
             </div>

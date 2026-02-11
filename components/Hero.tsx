@@ -51,8 +51,8 @@ const Hero: React.FC = () => {
 
           <motion.h1 variants={itemVariants} className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight mb-4 leading-[1.1]">
             Almoxarifado Inteligente <br />
-            Com Foco em <span className="text-gradient">Gestão de Economia</span> <br />
-            para Sua Empresa
+            Com Foco em <span className="text-gradient">Reduzir Custos</span> <br />
+            da Sua Empresa
           </motion.h1>
           <motion.p variants={itemVariants} className="text-gray-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
             Elimine planilhas obsoletas. Aura centraliza, automatiza e otimiza seu almoxarifado com inteligência artificial de última geração para reduzir custos operacionais.

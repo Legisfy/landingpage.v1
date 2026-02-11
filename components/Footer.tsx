@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Instagram, Linkedin, Twitter, Github } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -18,10 +18,8 @@ const Footer: React.FC = () => {
             O software definitivo para gestão de almoxarifados e estoques complexos. Inteligência que move sua operação rumo ao próximo nível.
           </p>
           <div className="flex gap-4">
-            <SocialIcon icon={<Linkedin size={20} />} />
-            <SocialIcon icon={<Instagram size={20} />} />
-            <SocialIcon icon={<Twitter size={20} />} />
-            <SocialIcon icon={<Github size={20} />} />
+            <SocialIcon href="https://www.linkedin.com/company/auraalmoxarifado/" icon={<Linkedin size={20} />} />
+            <SocialIcon href="https://www.instagram.com/auraalmoxarifado" icon={<Instagram size={20} />} />
           </div>
         </div>
 
@@ -63,8 +61,8 @@ const Footer: React.FC = () => {
   );
 };
 
-const SocialIcon: React.FC<{ icon: React.ReactNode }> = ({ icon }) => (
-  <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-500 hover:text-white hover:border-blue-500 hover:bg-blue-500/5 transition-all">
+const SocialIcon: React.FC<{ icon: React.ReactNode; href: string }> = ({ icon, href }) => (
+  <a href={href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-500 hover:text-white hover:border-blue-500 hover:bg-blue-500/5 transition-all">
     {icon}
   </a>
 );
