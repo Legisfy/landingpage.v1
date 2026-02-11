@@ -86,28 +86,22 @@ const plans = [
     discount: "26%",
     popular: false
   },
-  {
-    name: "Enterprise",
-    subtitle: "Sob Demanda",
-    monthlyPrice: "Personalizado",
-    annualPrice: "Personalizado",
-    description: "Para empresas que precisam de recursos específicos e integrações customizadas.",
-    features: [
-      "Recursos Específicos sob demanda",
-      "Desenvolvimento Customizado",
-      "Integrações de API ilimitadas",
-      "Gerente de Conta Próprio",
-      "Suporte via WhatsApp 24/7"
-    ],
-    buttonText: "Entre em Contato",
-    links: {
-      monthly: "https://wa.me/5511999999999", // Placeholder, ideally a generic contact or WhatsApp
-      yearly: "https://wa.me/5511999999999"
-    },
-    discount: "Custom",
-    popular: false
-  }
 ];
+
+const enterprisePlan = {
+  name: "Enterprise",
+  subtitle: "Sob Demanda",
+  description: "Para empresas que precisam de recursos específicos e integrações customizadas. Podemos desenvolver soluções exclusivas para o seu negócio.",
+  features: [
+    "Recursos Específicos sob demanda",
+    "Desenvolvimento Customizado",
+    "Integrações de API ilimitadas",
+    "Gerente de Conta Próprio",
+    "Suporte via WhatsApp 24/7"
+  ],
+  buttonText: "Falar com Especialista",
+  link: "https://wa.me/5511999999999" // TODO: Update with real link
+};
 
 const PricingSection: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
@@ -148,7 +142,7 @@ const PricingSection: React.FC = () => {
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-12">
         {plans.map((plan, i) => (
           <motion.div
             key={i}
@@ -231,6 +225,58 @@ const PricingSection: React.FC = () => {
           </motion.div>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="relative bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 overflow-hidden group"
+      >
+        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] -mr-32 -mt-32 rounded-full" />
+
+        <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="flex-1 text-center lg:text-left">
+            <div className="flex flex-col md:flex-row items-center gap-3 mb-4 justify-center lg:justify-start">
+              <h3 className="text-2xl md:text-3xl font-bold">{enterprisePlan.name}</h3>
+              <span className="text-xs bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full font-bold uppercase tracking-wider">
+                {enterprisePlan.subtitle}
+              </span>
+            </div>
+            <p className="text-gray-400 text-lg mb-6 max-w-2xl">
+              {enterprisePlan.description}
+            </p>
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-6">
+              {enterprisePlan.features.slice(0, 3).map((feature, idx) => (
+                <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                  <Check size={16} className="text-blue-500" />
+                  {feature}
+                </div>
+              ))}
+              <span className="text-blue-400 text-sm font-bold flex items-center gap-1">
+                + muito mais
+              </span>
+            </div>
+          </div>
+
+          <div className="shrink-0 w-full lg:w-auto text-center">
+            <div className="mb-6">
+              <span className="text-sm text-gray-500 block mb-1">Inicie seu projeto agora</span>
+              <span className="text-3xl font-black text-white">Preço Adaptável</span>
+            </div>
+            <motion.a
+              href={enterprisePlan.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center justify-center px-10 py-4 bg-white text-black hover:bg-gray-200 transition-all rounded-2xl font-bold text-lg shadow-xl shadow-white/5"
+            >
+              {enterprisePlan.buttonText}
+            </motion.a>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 };
