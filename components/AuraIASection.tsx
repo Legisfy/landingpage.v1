@@ -82,10 +82,9 @@ const AuraIASection: React.FC = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 1 }}
+                        transition={{ duration: 0.6 }}
                         className="relative hidden lg:block"
                     >
-                        <div className="absolute -inset-10 bg-white/5 blur-[100px] rounded-full animate-pulse"></div>
                         <div className="relative rounded-3xl border border-white/10 overflow-hidden shadow-2xl shadow-white/5">
                             <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent z-10 pointer-events-none"></div>
                             <div className="w-full h-full min-h-[500px] lg:min-h-[650px] bg-[#030712]/50">

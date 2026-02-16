@@ -38,24 +38,16 @@ const FloatingHologram = ({ children, x, y, delay, duration }: { children: React
 const SplineRobot: React.FC = () => {
     return (
         <div className="w-full h-[650px] relative flex items-center justify-center overflow-hidden">
-            {/* Holographic Tools */}
-            <FloatingHologram x="20%" y="30%" delay={0} duration={4}>
-                <FileText className="text-blue-400 w-6 h-6" />
+            {/* Holographic Tools - Reduzido para 2 elementos */}
+            <FloatingHologram x="20%" y="30%" delay={0} duration={5}>
+                <BarChart3 className="text-cyan-400 w-7 h-7" />
             </FloatingHologram>
 
-            <FloatingHologram x="75%" y="25%" delay={1} duration={5}>
-                <BarChart3 className="text-cyan-400 w-8 h-8" />
+            <FloatingHologram x="75%" y="55%" delay={1.5} duration={5.5}>
+                <ShieldCheck className="text-emerald-400 w-7 h-7" />
             </FloatingHologram>
 
-            <FloatingHologram x="15%" y="60%" delay={2} duration={6}>
-                <Target className="text-indigo-400 w-5 h-5" />
-            </FloatingHologram>
-
-            <FloatingHologram x="80%" y="55%" delay={1.5} duration={4.5}>
-                <ShieldCheck className="text-emerald-400 w-6 h-6" />
-            </FloatingHologram>
-
-            {/* "Assessor IA" Badge - Positioning to look like it's on chest/near */}
+            {/* "Assessor IA" Badge */}
             <motion.div
                 className="absolute top-[45%] left-1/2 -translate-x-1/2 z-20 pointer-events-none"
                 initial={{ opacity: 0 }}
@@ -69,25 +61,6 @@ const SplineRobot: React.FC = () => {
                     </span>
                 </div>
             </motion.div>
-
-            {/* Connecting Lines (Decoratve) */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none z-10 opacity-20">
-                <motion.path
-                    d="M 200 200 L 400 325"
-                    stroke="url(#gradient-line)"
-                    strokeWidth="1"
-                    initial={{ pathLength: 0, opacity: 0 }}
-                    animate={{ pathLength: 1, opacity: 1 }}
-                    transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
-                />
-                <defs>
-                    <linearGradient id="gradient-line" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="transparent" />
-                        <stop offset="50%" stopColor="#60A5FA" />
-                        <stop offset="100%" stopColor="transparent" />
-                    </linearGradient>
-                </defs>
-            </svg>
 
             <Suspense
                 fallback={
