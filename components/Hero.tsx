@@ -45,22 +45,22 @@ const Hero: React.FC = () => {
               ))}
             </div>
             <span className="text-gray-300 text-xs font-medium pr-1">
-              <span className="text-blue-400 font-bold">+ R$ 50mil</span> em custos reduzidos
+              <span className="text-white font-bold">+ 200 parlamentares</span> utilizando a plataforma
             </span>
           </motion.div>
 
           <motion.h1 variants={itemVariants} className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight mb-4 leading-[1.1]">
-            Almoxarifado Inteligente <br />
-            Com Foco em <span className="text-gradient">Reduzir Custos</span> <br />
-            da Sua Empresa
+            Gestão Política Inteligente <br />
+            Com Foco em <span className="text-gradient">Resultados Reais</span> <br />
+            Para Seu Mandato
           </motion.h1>
           <motion.p variants={itemVariants} className="text-gray-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-            Elimine planilhas obsoletas. Aura centraliza, automatiza e otimiza seu almoxarifado com inteligência artificial de última geração para reduzir custos operacionais.
+            Organize seu gabinete, gerencie eleitores e automatize o atendimento com a inteligência artificial da Legisfy. A solução definitiva para uma política moderna e eficiente.
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-8">
-            <a href="#precos" className="w-full sm:w-auto px-6 py-2.5 bg-blue-600 hover:bg-blue-500 transition-all rounded-full font-bold text-base flex items-center justify-center gap-2 shadow-xl shadow-blue-600/25 text-white">
-              Testar Agora
+            <a href="#precos" className="w-full sm:w-auto px-10 py-3 bg-white hover:bg-gray-200 transition-all rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-xl shadow-white/10 text-black">
+              Começar Agora
               <ArrowRight size={18} />
             </a>
             <a href="#demonstracao" className="w-full sm:w-auto px-6 py-2.5 bg-white/5 hover:bg-white/10 transition-all border border-white/10 rounded-full font-bold text-base flex items-center justify-center gap-2 text-white">

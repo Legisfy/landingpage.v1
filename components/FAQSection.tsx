@@ -5,28 +5,28 @@ import { Plus, Minus, HelpCircle } from 'lucide-react';
 
 const faqs = [
     {
-        question: "Preciso de algum equipamento caro para começar?",
-        answer: "De forma alguma! A Aura foi desenhada para rodar em qualquer celular ou tablet que você já possui. Transformamos seu dispositivo comum em um terminal de almoxarifado potente via navegador."
+        question: "Como a Legisfy ajuda na gestão de eleitores?",
+        answer: "A Legisfy centraliza todos os dados dos eleitores, permitindo registrar demandas, endereços e histórico de contatos. Isso facilita a personalização do atendimento e a fidelidade da sua base."
     },
     {
-        question: "Como a IA realmente reduz meus custos?",
-        answer: "Nossa IA analisa padrões de consumo e giro em tempo real. Ela identifica automaticamente anomalias que indicam furtos ou desperdícios e sugere compras baseadas na demanda real, evitando capital parado em estoque desnecessário."
+        question: "O assistente de IA substitui meus assessores?",
+        answer: "Não, ele potencializa o trabalho deles. A IA atende dúvidas frequentes de munícipes e automatiza processos burocráticos, liberando sua equipe para focar em articulação política e estratégia."
     },
     {
-        question: "É difícil migrar meus dados de planilhas para a Aura?",
-        answer: "É instantâneo. Temos um importador inteligente que aceita arquivos Excel ou CSV. Em poucos segundos, todo o seu histórico e inventário são organizados e categorizados pela nossa tecnologia."
+        question: "Posso exportar os dados do sistema?",
+        answer: "Sim, você tem total controle sobre seus dados. A qualquer momento você pode exportar relatórios, listas de contatos e demandas em formatos Excel ou CSV."
     },
     {
-        question: "Tenho suporte especializado se precisar de ajuda?",
-        answer: "Sim! Oferecemos suporte humanizado 24 horas por dia, 7 dias por semana. Seja via WhatsApp ou Chat, nossa equipe técnica está sempre pronta para garantir que sua gestão nunca pare."
+        question: "Como funciona a organização da agenda da equipe?",
+        answer: "O sistema permite criar agendas compartilhadas, definir metas de produtividade e acompanhar o status de cada tarefa delegada aos seus assessores em tempo real."
     },
     {
-        question: "Posso cancelar se não me adaptar à ferramenta?",
-        answer: "Com certeza. Acreditamos na liberdade dos nossos parceiros, por isso não trabalhamos com multas ou contratos de fidelidade. Se a Aura não fizer sentido para você, o cancelamento é feito com um clique."
+        question: "Os dados dos meus eleitores estão seguros?",
+        answer: "Segurança é nossa prioridade. Utilizamos criptografia de ponta a ponta e seguimos todas as normas da LGPD para garantir que as informações do seu mandato e dos eleitores fiquem protegidas."
     },
     {
-        question: "A Aura serve para qualquer tamanho de empresa?",
-        answer: "Sim. Nossos planos escalam conforme sua necessidade, desde pequenos negócios que estão saindo do papel até grandes operações que exigem múltiplos centros de custo e inteligência preditiva."
+        question: "A Legisfy serve para mandatos federais ou apenas municipais?",
+        answer: "A plataforma é flexível e atende desde vereadores e prefeitos até deputados federais e senadores, adaptando-se à escala e complexidade de cada gabinete."
     }
 ];
 
@@ -42,11 +42,11 @@ export const FAQSection: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4 text-blue-400 text-[10px] uppercase tracking-widest font-bold">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-4 text-white text-[10px] uppercase tracking-widest font-bold">
                             <HelpCircle size={14} />
-                            Dúvidas Comuns
+                            Perguntas Frequentes
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">Tire suas dúvidas <br /><span className="text-gradient">sobre a Aura.</span></h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6">Tire suas dúvidas <br /><span className="text-gradient">sobre a Legisfy.</span></h2>
                         <p className="text-gray-400 text-lg">
                             Tudo o que você precisa saber para digitalizar sua gestão hoje mesmo.
                         </p>
@@ -66,14 +66,14 @@ export const FAQSection: React.FC = () => {
                             <button
                                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                                 className={`w-full p-6 text-left flex items-center justify-between gap-4 rounded-2xl border transition-all duration-300 ${openIndex === i
-                                        ? 'bg-blue-600/10 border-blue-500/30'
-                                        : 'bg-white/5 border-white/10 hover:border-white/20'
+                                    ? 'bg-white/10 border-white/30'
+                                    : 'bg-white/5 border-white/10 hover:border-white/20'
                                     }`}
                             >
-                                <span className={`font-bold transition-colors ${openIndex === i ? 'text-blue-400' : 'text-gray-100'}`}>
+                                <span className={`font-bold transition-colors ${openIndex === i ? 'text-white' : 'text-gray-100'}`}>
                                     {faq.question}
                                 </span>
-                                <div className={`shrink-0 transition-transform duration-300 ${openIndex === i ? 'rotate-180 text-blue-400' : 'text-gray-500'}`}>
+                                <div className={`shrink-0 transition-transform duration-300 ${openIndex === i ? 'rotate-180 text-white' : 'text-gray-500'}`}>
                                     {openIndex === i ? <Minus size={20} /> : <Plus size={20} />}
                                 </div>
                             </button>
@@ -100,16 +100,16 @@ export const FAQSection: React.FC = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    className="mt-16 p-8 rounded-3xl bg-gradient-to-r from-blue-600/5 to-transparent border border-white/5 text-center"
+                    className="mt-16 p-8 rounded-3xl bg-gradient-to-r from-white/5 to-transparent border border-white/5 text-center"
                 >
                     <p className="text-gray-300 mb-6">Ainda tem alguma dúvida específica?</p>
                     <a
-                        href="https://wa.me/5527999205531?text=Olá,%20tenho%20uma%20dúvida%20específica%20sobre%20a%20Aura"
+                        href="https://wa.me/5511999999999?text=Olá,%20tenho%20uma%20dúvida%20sobre%20a%20Legisfy"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-blue-400 font-bold hover:underline"
+                        className="inline-flex items-center gap-2 text-white font-bold hover:underline"
                     >
-                        Conversar com um consultor agora <Plus size={16} />
+                        Conversar com um especialista agora <Plus size={16} />
                     </a>
                 </motion.div>
             </div>

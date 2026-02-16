@@ -24,11 +24,11 @@ import Footer from './components/Footer.tsx';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#030712] text-gray-100 selection:bg-blue-600 selection:text-white">
+    <div className="min-h-screen bg-[#030712] text-gray-100 selection:bg-gray-700 selection:text-white">
       {/* Decorative Background Elements */}
       <div className="fixed top-0 left-0 w-full h-[600px] pointer-events-none overflow-hidden -z-0">
-        <div className="absolute top-[-20%] left-[-10%] w-[70vw] h-[70vh] bg-blue-600/10 blur-[140px] rounded-full animate-pulse"></div>
-        <div className="absolute top-[-10%] right-[-10%] w-[60vw] h-[60vh] bg-purple-600/5 blur-[140px] rounded-full"></div>
+        <div className="absolute top-[-20%] left-[-10%] w-[70vw] h-[70vh] bg-white/5 blur-[140px] rounded-full animate-pulse"></div>
+        <div className="absolute top-[-10%] right-[-10%] w-[60vw] h-[60vh] bg-gray-600/5 blur-[140px] rounded-full"></div>
       </div>
 
       <div className="relative z-10">
@@ -47,11 +47,11 @@ const App: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <span className="text-blue-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Foco em Resultados</span>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">Controle absoluto com <br /><span className="text-gradient">Simplicidade e Economia.</span></h2>
-              <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                Aura elimina a complexidade da gestão e entrega relatórios estratégicos que impactam diretamente na economia da sua empresa.
-              </p>
+            <span className="text-gray-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Foco em Performance</span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Gestão avançada com <br /><span className="text-gradient">Simplicidade e Impacto.</span></h2>
+            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+              Legisfy elimina a burocracia do mandato e entrega relatórios estratégicos que potencializam sua atuação política.
+            </p>
             </motion.div>
             <FeatureGrid />
           </section>
@@ -70,26 +70,26 @@ const App: React.FC = () => {
                 transition={{ duration: 0.8 }}
               >
                 <h2 className="text-4xl font-bold mb-8 leading-tight">
-                  Tecnologia focada em <br /> gerar <span className="text-blue-400 underline decoration-blue-500/30">Valor Econômico</span>.
+                  Tecnologia focada em <br /> gerar <span className="text-white underline decoration-white/30">Impacto Político</span>.
                 </h2>
                 <div className="space-y-6">
                   <TechItem
                     delay={0.1}
-                    icon={<ScanLine className="text-blue-400" />}
-                    title="Simplicidade na Leitura"
-                    description="Transforme qualquer celular em um terminal de almoxarifado potente e fácil de usar."
+                    icon={<ScanLine className="text-white" />}
+                    title="Gestão de Eleitores"
+                    description="Organize sua base eleitoral e atenda demandas com agilidade e inteligência."
                   />
                   <TechItem
                     delay={0.2}
-                    icon={<BarChart3 className="text-blue-400" />}
-                    title="Relatórios de Alto Impacto"
-                    description="Entenda exatamente onde seu dinheiro está parado e como otimizar o capital de giro."
+                    icon={<BarChart3 className="text-white" />}
+                    title="Relatórios de Impacto"
+                    description="Mensure o alcance de suas ações e entenda as reais necessidades da população."
                   />
                   <TechItem
                     delay={0.3}
-                    icon={<Layers className="text-blue-400" />}
-                    title="Gestão Centralizada"
-                    description="Controle múltiplos depósitos com a facilidade de um único painel inteligente."
+                    icon={<Layers className="text-white" />}
+                    title="Inteligência de Mandato"
+                    description="Centralize toda a comunicação e dados do gabinete em uma única plataforma."
                   />
                 </div>
               </motion.div>
@@ -131,7 +131,7 @@ const TechItem: React.FC<{ icon: React.ReactNode; title: string; description: st
     transition={{ duration: 0.5, delay }}
     className="flex gap-4 items-start p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5"
   >
-    <div className="p-3 bg-blue-500/10 rounded-lg shrink-0">
+    <div className="p-3 bg-white/10 rounded-lg shrink-0">
       {icon}
     </div>
     <div>

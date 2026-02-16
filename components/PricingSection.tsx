@@ -5,45 +5,46 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const plans = [
   {
-    name: "Starter",
-    subtitle: "O Essencial",
-    monthlyPrice: "99,90",
-    annualPrice: "890,00",
-    description: "Ideal para pequenos negócios que precisam sair do controle manual e profissionalizar o estoque.",
+    name: "Vereador",
+    subtitle: "Ideal para Início",
+    monthlyPrice: "497,00",
+    annualPrice: "4.490,00",
+    description: "Perfeito para mandatos parlamentares que buscam organizar o atendimento básico.",
     features: [
-      "Capacidade: 01 Usuário | Até 400 Produtos",
-      "Gestão de Estoque Completa",
-      "Movimentações Diárias em tempo real",
-      "Importação Ágil de planilhas",
-      "Exportação de Dados (Excel/CSV)"
+      "Até 5.000 eleitores",
+      "Gestão de Demandas Básica",
+      "Agenda do Parlamentar",
+      "Relatórios Mensais",
+      "Suporte via E-mail"
     ],
-    buttonText: "Testar Agora",
+    buttonText: "Começar Agora",
     links: {
-      monthly: "https://pay.auraalmoxarifado.com.br/?plan=starter&cycle=monthly",
-      yearly: "https://pay.auraalmoxarifado.com.br/?plan=starter&cycle=yearly"
+      monthly: "https://pay.legisfy.app.br/?plan=vereador&cycle=monthly",
+      yearly: "https://pay.legisfy.app.br/?plan=vereador&cycle=yearly"
     },
-    discount: "26%",
+    discount: "25%",
     popular: false
   },
   {
-    name: "Pro",
-    subtitle: "Mais Controle",
-    monthlyPrice: "297,00",
-    annualPrice: "2.600,00",
-    description: "Para quem já tem um fluxo constante e precisa de ferramentas de reposição.",
+    name: "Deputado",
+    subtitle: "Mais Popular",
+    monthlyPrice: "997,00",
+    annualPrice: "8.900,00",
+    description: "A solução completa para gabinetes com alto volume de demandas e equipe.",
     features: [
-      "Capacidade: 01 Usuário | Até 500 Produtos",
-      "Módulo de Compras e fornecedores",
-      "Suporte Prioritário",
-      "Tudo do Plano Starter"
+      "Eleitores Ilimitados",
+      "Assessoria com IA Básica",
+      "Gestão de Equipe Completa",
+      "Metas e Produtividade",
+      "Suporte via WhatsApp"
     ],
-    buttonText: "Testar Agora",
+    buttonText: "Começar Agora",
     links: {
-      monthly: "https://pay.auraalmoxarifado.com.br/?plan=pro&cycle=monthly",
-      yearly: "https://pay.auraalmoxarifado.com.br/?plan=pro&cycle=yearly"
+      monthly: "https://pay.legisfy.app.br/?plan=deputado&cycle=monthly",
+      yearly: "https://pay.legisfy.app.br/?plan=deputado&cycle=yearly"
     },
-    discount: "27%",
-    popular: false
+    discount: "26%",
+    popular: true
   },
   {
     name: "Business",
@@ -129,7 +130,7 @@ const PricingSection: React.FC = () => {
             >
               <motion.div
                 animate={{ x: billingCycle === 'monthly' ? 0 : 28 }}
-                className="w-5 h-5 bg-blue-500 rounded-full shadow-lg shadow-blue-500/50"
+                className="w-5 h-5 bg-white rounded-full shadow-lg shadow-white/50"
               />
             </button>
             <div className="flex items-center gap-2">
@@ -164,7 +165,7 @@ const PricingSection: React.FC = () => {
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-1">
                 <h3 className="text-xl font-bold">{plan.name}</h3>
-                <span className="text-xs bg-white/10 px-2 py-0.5 rounded text-blue-300">{plan.subtitle}</span>
+                <span className="text-xs bg-white/10 px-2 py-0.5 rounded text-gray-300">{plan.subtitle}</span>
               </div>
               <p className="text-gray-400 text-xs leading-relaxed line-clamp-2">{plan.description}</p>
             </div>
@@ -211,7 +212,7 @@ const PricingSection: React.FC = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className={`w-full py-3 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 ${plan.popular
-                ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/25'
+                ? 'bg-white hover:bg-gray-200 text-black shadow-lg shadow-white/10'
                 : 'bg-white/5 hover:bg-white/10 text-white border border-white/10'
                 }`}
             >
@@ -239,7 +240,7 @@ const PricingSection: React.FC = () => {
           <div className="flex-1 text-center lg:text-left">
             <div className="flex flex-col md:flex-row items-center gap-3 mb-4 justify-center lg:justify-start">
               <h3 className="text-2xl md:text-3xl font-bold">{enterprisePlan.name}</h3>
-              <span className="text-xs bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full font-bold uppercase tracking-wider">
+              <span className="text-xs bg-white/10 text-white px-3 py-1 rounded-full font-bold uppercase tracking-wider">
                 {enterprisePlan.subtitle}
               </span>
             </div>
