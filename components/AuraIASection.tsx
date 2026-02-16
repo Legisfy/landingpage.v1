@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, TrendingDown, FileSpreadsheet, AlertTriangle, ShoppingCart, Sparkles } from 'lucide-react';
+import SplineRobot from './SplineRobot';
 
 const features = [
     {
@@ -42,7 +43,7 @@ const AuraIASection: React.FC = () => {
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-[10px] uppercase tracking-widest font-bold mb-5">
                             <Sparkles size={14} />
-                            LEGISFY IA: Inteligência Política
+                            ASSESSOR IA: Inteligência Política
                         </div>
 
                         <h2 className="text-3xl md:text-4xl font-black mb-6 leading-tight">
@@ -53,7 +54,7 @@ const AuraIASection: React.FC = () => {
                         </h2>
 
                         <p className="text-gray-400 text-base mb-8 leading-relaxed max-w-xl">
-                            A Legisfy IA não apenas armazena dados; ela os interpreta para o seu mandato.
+                            O Assessor IA não apenas armazena dados; ele os interpreta para o seu mandato.
                             Focada no gabinete, nossa IA analisa cada demanda para potencializar seus resultados.
                         </p>
 
@@ -86,12 +87,10 @@ const AuraIASection: React.FC = () => {
                     >
                         <div className="absolute -inset-10 bg-white/5 blur-[100px] rounded-full animate-pulse"></div>
                         <div className="relative rounded-3xl border border-white/10 overflow-hidden shadow-2xl shadow-white/5">
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent z-10"></div>
-                            <img
-                                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop"
-                                alt="Aura IA Interface"
-                                className="w-full h-[480px] object-cover opacity-80"
-                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent z-10 pointer-events-none"></div>
+                            <div className="w-full h-full min-h-[500px] lg:min-h-[650px] bg-[#030712]/50">
+                                <SplineRobot />
+                            </div>
                             <div className="absolute bottom-6 left-6 z-20 max-w-xs">
                                 <div className="p-5 rounded-2xl bg-black/60 backdrop-blur-xl border border-white/10">
                                     <div className="flex items-center gap-3 mb-3">

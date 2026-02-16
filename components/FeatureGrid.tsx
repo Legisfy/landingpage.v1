@@ -1,39 +1,38 @@
-
 import React from 'react';
-import { ShieldCheck, BarChart3, Zap, Layers, Package, MonitorSmartphone, Coins } from 'lucide-react';
+import { ClipboardList, GitMerge, Calendar, Users, Zap, Trophy } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const FeatureGrid: React.FC = () => {
   const features = [
     {
-      icon: <MonitorSmartphone className="text-white" />,
-      title: "Gestão de Eleitores",
-      description: "Organize sua base eleitoral de forma eficiente, registrando demandas e acompanhando cada atendimento."
+      icon: <ClipboardList className="text-white" />,
+      title: "Demandas",
+      description: "Centralize, acompanhe e priorize todas as demandas do gabinete com rastreabilidade completa."
+    },
+    {
+      icon: <GitMerge className="text-white" />,
+      title: "Indicações",
+      description: "Gerencie indicações com histórico, status e responsáveis definidos em um fluxo organizado."
+    },
+    {
+      icon: <Calendar className="text-white" />,
+      title: "Agenda",
+      description: "Estruture compromissos e prazos com visão clara da rotina do mandato."
+    },
+    {
+      icon: <Users className="text-white" />,
+      title: "Equipe",
+      description: "Coordene assessores, tarefas e responsabilidades em um painel unificado."
     },
     {
       icon: <Zap className="text-white" />,
-      title: "Assessoria com IA 24/7",
-      description: "Um assistente inteligente que atende munícipes e automatiza processos internos do seu gabinete."
+      title: "Assessor IA",
+      description: "Assistente inteligente 24/7 para atendimento, triagem e automação interna."
     },
     {
-      icon: <Layers className="text-white" />,
-      title: "Gestão de Agenda e Equipe",
-      description: "Coordene compromissos, tarefas e metas da sua equipe em um painel centralizado e intuitivo."
-    },
-    {
-      icon: <BarChart3 className="text-white" />,
-      title: "Relatórios de Impacto",
-      description: "Acesse dados estratégicos sobre sua atuação parlamentar e o engajamento da população."
-    },
-    {
-      icon: <ShieldCheck className="text-white" />,
-      title: "Segurança de Dados",
-      description: "Proteção total das informações do seu mandato com criptografia e backups automáticos."
-    },
-    {
-      icon: <Coins className="text-white" />,
-      title: "Produtividade Máxima",
-      description: "Otimize recursos e tempo da sua equipe com fluxos de trabalho inteligentes e automatizados."
+      icon: <Trophy className="text-white" />,
+      title: "Gamificação",
+      description: "Metas, pontuação e performance para engajar a equipe e elevar a produtividade."
     }
   ];
 

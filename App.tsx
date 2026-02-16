@@ -1,10 +1,6 @@
 
 import React from 'react';
-import {
-  BarChart3,
-  Layers,
-  ScanLine
-} from 'lucide-react';
+import { Github, Twitter, Linkedin, Mail, ArrowRight, Play, CheckCircle2, ShieldCheck, BarChart3, Zap, Layers, Globe, Users, Menu, X, ChevronRight, ClipboardList } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // Components
@@ -17,18 +13,21 @@ import StatsSection from './components/StatsSection.tsx';
 import TestimonialsSection from './components/TestimonialsSection.tsx';
 import PricingSection from './components/PricingSection.tsx';
 import AuraIASection from './components/AuraIASection.tsx';
+import SecuritySection from './components/SecuritySection.tsx';
 import CTASection from './components/CTASection.tsx';
 import TechDashboard from './components/TechDashboard.tsx';
 import FAQSection from './components/FAQSection.tsx';
 import Footer from './components/Footer.tsx';
-
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#030712] text-gray-100 selection:bg-gray-700 selection:text-white">
-      {/* Decorative Background Elements */}
-      <div className="fixed top-0 left-0 w-full h-[600px] pointer-events-none overflow-hidden -z-0">
-        <div className="absolute top-[-20%] left-[-10%] w-[70vw] h-[70vh] bg-white/5 blur-[140px] rounded-full animate-pulse"></div>
-        <div className="absolute top-[-10%] right-[-10%] w-[60vw] h-[60vh] bg-gray-600/5 blur-[140px] rounded-full"></div>
+    <div className="min-h-screen bg-[#000] text-gray-100 selection:bg-gray-800 selection:text-white overflow-x-hidden">
+      <div className="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden -z-0">
+        {/* Top Center Glow */}
+        <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[100vw] h-[60vh] bg-white/[0.03] blur-[120px] rounded-[100%]"></div>
+
+        {/* Subtle Side Reflexes */}
+        <div className="absolute top-[20%] left-[-10%] w-[40vw] h-[40vh] bg-white/[0.02] blur-[100px] rounded-full rotate-45"></div>
+        <div className="absolute top-[10%] right-[-10%] w-[30vw] h-[50vh] bg-white/[0.01] blur-[100px] rounded-full -rotate-12"></div>
       </div>
 
       <div className="relative z-10">
@@ -39,7 +38,7 @@ const App: React.FC = () => {
 
           <DemoScrollSection />
 
-          <section id="funcionalidades" className="pt-12 pb-24 px-6 max-w-7xl mx-auto scroll-mt-20">
+          <section id="funcionalidades" className="pt-2 pb-24 px-6 max-w-7xl mx-auto scroll-mt-20">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -47,17 +46,21 @@ const App: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-            <span className="text-gray-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Foco em Performance</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Gestão avançada com <br /><span className="text-gradient">Simplicidade e Impacto.</span></h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-              Legisfy elimina a burocracia do mandato e entrega relatórios estratégicos que potencializam sua atuação política.
-            </p>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gradient" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
+                Tecnologia que sustenta <br /> mandatos fortes
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl">
+                Automação, inteligência e organização para escalar a atuação política com precisão.
+              </p>
             </motion.div>
             <FeatureGrid />
           </section>
 
+          <AuraIASection />
+
+          <SecuritySection />
+
           <div id="sobre" className="scroll-mt-20">
-            <StatsSection />
             <ComparisonSection />
           </div>
 
@@ -75,21 +78,21 @@ const App: React.FC = () => {
                 <div className="space-y-6">
                   <TechItem
                     delay={0.1}
-                    icon={<ScanLine className="text-white" />}
-                    title="Gestão de Eleitores"
-                    description="Organize sua base eleitoral e atenda demandas com agilidade e inteligência."
+                    icon={<ClipboardList className="text-white" />}
+                    title="Demandas"
+                    description="Centralize, priorize e rastreie cada pedido da sua base eleitoral."
                   />
                   <TechItem
                     delay={0.2}
-                    icon={<BarChart3 className="text-white" />}
-                    title="Relatórios de Impacto"
-                    description="Mensure o alcance de suas ações e entenda as reais necessidades da população."
+                    icon={<Zap className="text-white" />}
+                    title="Indicações"
+                    description="Monitore o status e o histórico completo de cada indicação política."
                   />
                   <TechItem
                     delay={0.3}
-                    icon={<Layers className="text-white" />}
-                    title="Inteligência de Mandato"
-                    description="Centralize toda a comunicação e dados do gabinete em uma única plataforma."
+                    icon={<Users className="text-white" />}
+                    title="Eleitores"
+                    description="Base organizada com dados estratégicos para uma proximidade real com o cidadão."
                   />
                 </div>
               </motion.div>
@@ -100,7 +103,7 @@ const App: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="absolute -inset-4 bg-blue-500/10 blur-2xl rounded-3xl"></div>
+                <div className="absolute -inset-4 bg-white/5 blur-2xl rounded-3xl"></div>
                 <TechDashboard />
               </motion.div>
             </div>
@@ -108,7 +111,7 @@ const App: React.FC = () => {
 
           <TestimonialsSection />
 
-          <AuraIASection />
+
 
           <PricingSection />
 
@@ -119,7 +122,7 @@ const App: React.FC = () => {
 
         <Footer />
       </div>
-    </div>
+    </div >
   );
 };
 

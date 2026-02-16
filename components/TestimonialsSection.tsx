@@ -5,25 +5,25 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    name: "Carlos Eduardo",
-    role: "Diretor de Operações - LogiCorp",
-    content: "O que mais me impressionou foi a simplicidade. Implementamos em menos de 48h e minha equipe, que odiava planilhas, se adaptou no primeiro dia. É intuitivo de verdade.",
+    name: "Dr. Marcos Rocha",
+    role: "Deputado Estadual",
+    content: "O que mais me impressionou foi a simplicidade. Implementamos no gabinete em menos de 48h e minha equipe se adaptou no primeiro dia. É intuitivo de verdade.",
     rating: 5,
     tag: "Simplicidade"
   },
   {
-    name: "Ana Beatriz",
-    role: "Gerente de Suprimentos - Indústria Meta",
-    content: "Os relatórios preditivos são valiosíssimos. Conseguimos identificar um gargalo de desperdício que nos custava R$ 15 mil por mês. A Aura pagou o investimento em 30 dias.",
+    name: "Juliana Silva",
+    role: "Chefe de Gabinete",
+    content: "Os relatórios de demandas são valiosíssimos. Conseguimos identificar as reais necessidades dos bairros e priorizar nossas emendas de forma estratégica.",
     rating: 5,
-    tag: "Relatórios & Economia"
+    tag: "Impacto & Estratégia"
   },
   {
-    name: "Ricardo Mendes",
-    role: "Proprietário - Distribuidora Norte",
-    content: "Finalmente uma gestão de economia real. O sistema avisa exatamente o que comprar e quando, evitando estoque parado e capital de giro travado. Essencial.",
+    name: "Roberto Almeida",
+    role: "Vereador",
+    content: "Finalmente uma gestão de mandato real. O sistema avisa as prioridades da semana e mantém o contato com eleitores sempre ativo. Essencial.",
     rating: 5,
-    tag: "Gestão Financeira"
+    tag: "Gestão Política"
   }
 ];
 
@@ -42,7 +42,7 @@ const TestimonialsSection: React.FC = () => {
           </div>
           <span className="text-gray-400 font-medium">4.9/5 estrelas no Google</span>
         </motion.div>
-        <h2 className="text-3xl md:text-5xl font-bold mb-6">A escolha de quem busca <br/><span className="text-gradient">eficiência e resultado real.</span></h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-6">A escolha de quem busca <br /><span className="text-gradient">eficiência e resultado real.</span></h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -53,17 +53,17 @@ const TestimonialsSection: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="p-8 rounded-3xl bg-white/5 border border-white/10 relative group hover:border-blue-500/30 transition-all"
+            className="p-8 rounded-3xl bg-white/5 border border-white/10 relative group hover:border-white/30 transition-all"
           >
-            <Quote className="absolute top-6 right-6 text-blue-500/20 group-hover:text-blue-500/40 transition-colors" size={40} />
-            <div className="inline-block px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold mb-6 uppercase tracking-wider">
+            <Quote className="absolute top-6 right-6 text-white/5 group-hover:text-white/20 transition-colors" size={40} />
+            <div className="inline-block px-3 py-1 rounded-full bg-white/10 text-white text-xs font-bold mb-6 uppercase tracking-wider">
               {t.tag}
             </div>
             <p className="text-gray-300 mb-8 italic leading-relaxed">
               "{t.content}"
             </p>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center font-bold text-white shadow-lg">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-white/20 to-white/5 flex items-center justify-center font-bold text-white shadow-lg border border-white/10">
                 {t.name.charAt(0)}
               </div>
               <div>
