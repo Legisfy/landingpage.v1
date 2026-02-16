@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
             <img
               src="https://wvvxstgpjodmfxpekhkf.supabase.co/storage/v1/object/public/LEGISFY/legisfy%20branco.png"
               alt="Legisfy Logo"
-              className="h-10 w-auto brightness-110"
+              className="h-20 w-auto brightness-110"
             />
           </div>
           <p className="text-gray-500 leading-relaxed mb-6 max-w-xs">
