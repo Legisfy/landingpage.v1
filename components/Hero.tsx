@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
             </span>
           </motion.div>
 
-          <motion.h1 variants={itemVariants} className="text-3xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-6 leading-[1.1] text-gradient">
+          <motion.h1 variants={itemVariants} className="text-2xl md:text-4xl lg:text-5xl font-black tracking-tighter mb-6 leading-[1.1] text-gradient">
             Recursos Poderosos <br />
             Para Um Mandato <br />
             Inteligente.
