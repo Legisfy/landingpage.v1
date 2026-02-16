@@ -49,10 +49,10 @@ const Hero: React.FC = () => {
             </span>
           </motion.div>
 
-          <motion.h1 variants={itemVariants} className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight mb-4 leading-[1.1]">
-            Gestão Política Inteligente <br />
-            Com Foco em <span className="text-gradient">Resultados Reais</span> <br />
-            Para Seu Mandato
+          <motion.h1 variants={itemVariants} className="text-3xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-6 leading-[1.1] text-gradient">
+            Recursos Poderosos <br />
+            Para Um Mandato <br />
+            Inteligente.
           </motion.h1>
           <motion.p variants={itemVariants} className="text-gray-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
             Organize seu gabinete, gerencie eleitores e automatize o atendimento com a inteligência artificial da Legisfy. A solução definitiva para uma política moderna e eficiente.
