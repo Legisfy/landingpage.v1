@@ -9,8 +9,8 @@ const Footer: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 mb-6">
             <img
-              src="https://zdgapmcalocdvdgvbwsj.supabase.co/storage/v1/object/public/AuraLogo/image-removebg-preview.png"
-              alt="Aura Logo"
+              src="https://wvvxstgpjodmfxpekhkf.supabase.co/storage/v1/object/public/LEGISFY/legisfy%20branco.png"
+              alt="Legisfy Logo"
               className="h-10 w-auto brightness-110"
             />
           </div>
@@ -18,8 +18,8 @@ const Footer: React.FC = () => {
             A plataforma definitiva para gestão de mandatos e relacionamento estratégico com eleitores. Tecnologia que transforma a política brasileira.
           </p>
           <div className="flex gap-4">
-            <SocialIcon href="https://www.linkedin.com/company/auraalmoxarifado/" icon={<Linkedin size={20} />} />
-            <SocialIcon href="https://www.instagram.com/auraalmoxarifado" icon={<Instagram size={20} />} />
+            <SocialIcon href="https://www.linkedin.com/company/legisfy" icon={<Linkedin size={20} />} />
+            <SocialIcon href="https://www.instagram.com/legisfy.app.br" icon={<Instagram size={20} />} />
           </div>
         </div>
 
