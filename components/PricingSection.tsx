@@ -111,9 +111,25 @@ const PricingSection: React.FC = () => {
         >
           <span className="text-white font-semibold tracking-wider uppercase text-sm mb-4 block">Planos e Preços</span>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">A ferramenta que se <br /><span className="text-gradient">paga logo no primeiro mês.</span></h2>
-          <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed mb-10">
-            Escolha hoje o plano que melhor se adapta à realidade do seu gabinete e <span className="text-white font-bold whitespace-nowrap">teste grátis por 07 dias.</span>
+          <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed mb-6">
+            Escolha hoje o plano que melhor se adapta à realidade do seu gabinete.
           </p>
+
+          {/* Objection Breakers Bar */}
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm">
+              <Zap size={16} className="text-yellow-400 fill-yellow-400/20" />
+              <span className="text-white text-xs font-bold uppercase tracking-wider">07 Dias Gratuitos</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm">
+              <Shield size={16} className="text-green-400" />
+              <span className="text-white text-xs font-bold uppercase tracking-wider">Cancelamento a qualquer momento</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm">
+              <MessageSquare size={16} className="text-blue-400" />
+              <span className="text-white text-xs font-bold uppercase tracking-wider">Sem contrato de fidelidade</span>
+            </div>
+          </div>
         </motion.div>
       </div>
 
@@ -137,6 +153,13 @@ const PricingSection: React.FC = () => {
                 Popular
               </div>
             )}
+
+            <div className="absolute top-3 left-6">
+               <div className="flex items-center gap-1.5 bg-green-500/10 border border-green-500/20 rounded-full px-2 py-0.5">
+                  <div className="w-1 h-1 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-[9px] font-black text-green-400 uppercase tracking-tighter">7 DIAS GRÁTIS</span>
+               </div>
+            </div>
 
             {/* Header */}
             <div className="p-6 pb-4">
@@ -169,6 +192,9 @@ const PricingSection: React.FC = () => {
 
             {/* CTA Button */}
             <div className="p-5 pt-2">
+              <div className="text-center mb-3">
+                <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Cancele quando quiser</p>
+              </div>
               <a
                 href={plan.link}
                 target="_blank"
@@ -179,7 +205,7 @@ const PricingSection: React.FC = () => {
                     : 'bg-white/8 hover:bg-white/15 text-white border border-white/15'
                 }`}
               >
-                Começar Agora
+                Inicie sua prova grátis
                 <ArrowRight size={15} />
               </a>
             </div>
@@ -248,16 +274,21 @@ const PricingSection: React.FC = () => {
                 </p>
               </div>
 
-              <a
-                href={intelligencePlan.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-white hover:bg-gray-100 text-black font-black py-4 px-8 rounded-2xl transition-all shadow-xl shadow-white/10 hover:shadow-white/20 text-sm"
-              >
-                <Zap size={18} />
-                Contratar Intelligence
-                <ArrowRight size={16} />
-              </a>
+              <div className="flex flex-col gap-3">
+                <a
+                  href={intelligencePlan.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-black font-black py-4 px-8 rounded-2xl transition-all shadow-xl shadow-white/10 hover:shadow-white/20 text-sm"
+                >
+                  <Zap size={18} />
+                  Iniciar Prova Grátis no Intelligence
+                  <ArrowRight size={16} />
+                </a>
+                <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest text-center md:text-left md:ml-2">
+                  7 dias gratuitos • Sem fidelidade • Cancelamento imediato
+                </p>
+              </div>
             </div>
 
             {/* Right — Features Grid */}
