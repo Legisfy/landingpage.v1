@@ -2,6 +2,7 @@
 import React from 'react';
 import { Check, ArrowRight, Brain, Map, Users, Target, Zap, Star, Shield, MessageSquare, BarChart3, Infinity } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ContactForm from './ContactForm';
 
 const mainPlans = [
   {
@@ -311,6 +312,18 @@ const PricingSection: React.FC = () => {
           </div>
         </div>
       </motion.div>
+
+      {/* ============================================================= */}
+      {/* Contact Form for Cabinet interest                             */}
+      {/* ============================================================= */}
+      <div className="mt-24">
+        <ContactForm 
+          title="Leve a Legisfy para seu Gabinete"
+          subtitle="Ainda tem dúvidas ou prefere uma apresentação personalizada da nossa plataforma para sua equipe de gabinete? Preencha os dados abaixo."
+          sourceType="cabinet_request"
+          id="contato-gabinete"
+        />
+      </div>
     </section>
   );
 };

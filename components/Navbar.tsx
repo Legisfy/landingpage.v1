@@ -24,9 +24,10 @@ const Navbar: React.FC = () => {
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%)',
       } : {}}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto px-6 flex items-center justify-between">
         <div className="hidden md:flex items-center gap-10">
           <NavLink href="#funcionalidades">Funcionalidades</NavLink>
+          <NavLink href="#camaras">Para Câmaras</NavLink>
           <NavLink href="#aura-ia">Assessor IA</NavLink>
           <NavLink href="#seguranca">Segurança</NavLink>
           <NavLink href="#precos">Planos</NavLink>
@@ -57,6 +58,7 @@ const Navbar: React.FC = () => {
       <div className={`md:hidden absolute top-full left-0 right-0 bg-[#0a0a0a]/95 backdrop-blur-2xl border-b border-white/10 transition-all duration-300 overflow-hidden ${mobileMenuOpen ? 'max-h-screen py-8' : 'max-h-0'}`}>
         <div className="flex flex-col items-center gap-6 px-6">
           <NavLink href="#funcionalidades" onClick={() => setMobileMenuOpen(false)}>Funcionalidades</NavLink>
+          <NavLink href="#camaras" onClick={() => setMobileMenuOpen(false)}>Para Câmaras</NavLink>
           <NavLink href="#aura-ia" onClick={() => setMobileMenuOpen(false)}>Assessor IA</NavLink>
           <NavLink href="#seguranca" onClick={() => setMobileMenuOpen(false)}>Segurança</NavLink>
           <NavLink href="#precos" onClick={() => setMobileMenuOpen(false)}>Planos</NavLink>
